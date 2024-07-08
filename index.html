@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Maximilian Lemos - Personal Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Sora:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --tj-ff-body: Sora;
+            --tj-fz-body: 16px;
+            --tj-ff-heading: Sora;
+            --tj-body: #dddddd;
+            --tj-theme-primary: #8750f7;
+            --tj-theme-secondary: #2a1454;
+            --tj-heading-primary: #102039;
+            --tj-theme-accent-2: #140c1c;
+            --tj-off-white: #f6f3fc;
+            --tj-grey-2: #d9d9d9;
+        }
+
+        body {
+            font-family: var(--tj-ff-body), sans-serif;
+            font-size: var(--tj-fz-body);
+            line-height: 1.5;
+            color: var(--tj-body);
+            background-color: var(--tj-theme-accent-2);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        .tj-header-area {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            background-color: transparent;
+            transition: background-color 0.3s ease;
+        }
+
+        .tj-header-area.sticky {
+            background-color: var(--tj-theme-accent-2);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo-box img {
+            max-width: 60px;
+            height: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            color: var(--tj-off-white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--tj-theme-primary);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(rgba(20, 12, 28, 0.8), rgba(20, 12, 28, 0.8)), url('/ED533298-6385-4A0C-934B-060119C00D26.jpeg') no-repeat center center/cover;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: var(--tj-off-white);
+        }
+
+        .hero-title {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            font-family: var(--tj-ff-heading), sans-serif;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--tj-theme-primary);
+            color: var(--tj-off-white);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: var(--tj-theme-secondary);
+        }
+
+
+    </style>
+</head>
+<body>
+    <header class="tj-header-area">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-box">
+                    <a href="#">
+                        <img src="" alt="Maximilian Lemos">
+                    </a>
+                </div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#works">Works</a></li>
+                        <li><a href="#resume">Resume</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section" id="intro">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Software Engineer</h1>
+                <p class="hero-subtitle">Experienced in designing, developing, and testing enterprise-level applications</p>
+                <a href="#projects" class="btn">View My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add more sections (About, Services, Projects, etc.) here -->
+
+    <script>
+        // Simple sticky header
+        window.addEventListener('scroll', function() {
+            var header = document.querySelector('.tj-header-area');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+    </script>
+</body>
+</html>
